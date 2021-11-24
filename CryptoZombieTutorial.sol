@@ -18,4 +18,10 @@ contract ZombieFactory {
 
     // start here
 
+
+    //declaring the function as --view-- which means it can access a state variable's data
+    function _generateRandomDna(string memory _str) private view returns(uint) {
+
+    }
+
 }

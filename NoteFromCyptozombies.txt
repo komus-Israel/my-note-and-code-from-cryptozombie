@@ -65,4 +65,42 @@ Note that this doesn't apply to integers
 
 // Function declaration part-2 (view and pure)
 
-if a function will be changing the state of any data in the contract, it mustn't be declared as 
+If a function will be changing the state of any data or variable in the contract, it mustn't be declared as view of pure 
+
+ ------ when to declare a function as view --------
+
+ If a function will be accessing any data or variable in the contract without changing the state, it will be declared as view
+
+ example:  contract Students {
+                
+                string level = 'grade one';
+
+                function getLevel() public view returns(string memory){
+                        return level
+                }
+
+            }
+
+
+            note:
+
+            1. We access the level variable so we declared our function as view.
+            2. We want it to be public, so we declared it public ---depends on you (private/public)
+            3. We need to declay the return type using --returns-- key word and followed by the data type of the data to be returned
+            4. Remember we spoke about memory earlier, it applies the same here
+
+------ when to declare a function as pure --------
+
+
+            contract Students {
+                
+                string level = 'grade one';
+
+                function dontAccessData(number) public pure returns (string memory) {
+                    return number;
+                }
+            }
+
+            note:
+
+            1. We are not accessing any data from the contract, so it is declared as pure

@@ -1,0 +1,68 @@
+State variables:
+
+    These variables are written to the ethereum Blockchain
+
+DATA TYPES
+
+1. string e.g string name = "Israel";
+
+2. uint  -- unsigned intergers e.g uint256 = 1345;
+
+
+3. int -- signed integers  e.g int256 = -1345;
+
+
+4. struct -- This enables us to create a datatype with multitple properties e.g 
+
+            struct Student{
+                string name;
+                uint age;
+                uint studentID;
+            }
+
+5. Arrays -- there are fixed arrays of fixed length and dynamic arrays of dynamic length
+        
+        e.g uint[10] fixedArray;  //a variable fixedArray is assigned an array of fixed length of 10
+            
+            string[] studentNames;  //a variable studentNames is assigned an array of unfixed/dynamic length
+
+
+FUNCTIONS
+
+1. Function visibility
+2. Function declaration
+
+
+
+// Function visibility
+Functions are public to other smart Contracts by default except they are explicitly hidden using the private keyword such as:
+        
+        function getNames(string[] names) private {
+
+            return names;
+        }
+
+        // this function is hidden to other contracts 
+        // don't worry about how the function behaves
+
+
+// Function declaration part-1 
+
+To create a function that accepts parameters, the datatype of the parameter must be specified
+
+        function createStudentData(string memory name, uint age) private {
+
+                // keep the function body empty
+        }
+
+This function expects an a string and an unsigned integer as its argument. 
+
+To address the memory in the function declaration, note that, for reference types such as arrays, structs, mappings and strings, we need
+to specify where their variables should be stored which is memory. 
+
+Note that this doesn't apply to integers
+
+
+// Function declaration part-2 (view and pure)
+
+if a function will be changing the state of any data in the contract, it mustn't be declared as 

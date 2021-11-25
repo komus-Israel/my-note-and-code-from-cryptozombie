@@ -1,0 +1,6 @@
+MAPPING AND ADDRESS
+
+mapping and address are solidity data types
+
+mapping can be likened to a data type/data structure of key pair values. It can e likened to
+dictionaries in python and json object in javascript

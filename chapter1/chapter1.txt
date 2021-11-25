@@ -104,3 +104,8 @@ If a function will be changing the state of any data or variable in the contract
             note:
 
             1. We are not accessing any data from the contract, so it is declared as pure
+
+EVENTS
+
+Events are a way for the contract to communicate that something happened on the blockchain to the app front-end
+which can be "listening" for certain events and take action when they happen

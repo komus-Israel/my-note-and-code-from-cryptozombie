@@ -1,0 +1,33 @@
+MAPPING AND ADDRESS
+
+mapping and address are solidity data types
+
+
+---mapping---
+mapping can be likened to a data type/data structure of key pair values. It can e likened to
+dictionaries in python and json object in javascript.
+
+example :
+    // For a financial app, storing a uint that holds the user's account balance:
+    mapping (address => uint) public accountBalance;
+
+    for the above map called accountBalance, the key will be an address while it's value will be a uint
+
+
+    // Or could be used to store / lookup usernames based on userId
+    mapping (uint => string) userIdToName;
+
+    for the above map called userIdToName, it the key is a unit while it's value is a string
+
+
+---address---
+
+The Ethereum blockchain is made up of accounts which can be likened to banck accounts.
+An account has an Ether balance which is the native currency used on the Ethereum blockchain.
+
+Each account has an address on the blockchain. It serves as a unique identifier that points to that account.
+
+An address can be owned by a USER or A CONTRACT
+
+msg.sender is a global variable available to all functions. which refers to the address of the person
+or Smart contract who called the current function

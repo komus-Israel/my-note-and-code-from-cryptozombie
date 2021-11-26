@@ -1,4 +1,7 @@
 MAPPING AND ADDRESS
+MSG.SENDER
+REQUIRE
+INHERITANCE
 
 mapping and address are solidity data types
 
@@ -31,3 +34,32 @@ An address can be owned by a USER or A CONTRACT
 
 msg.sender is a global variable available to all functions. which refers to the address of the person
 or Smart contract who called the current function
+
+
+---require---
+
+require makes it so that the function will throw an error and stop executing if some condition is not true
+
+example 
+
+
+        pragma solidity ^0.8.0;
+
+        contract OwnerBalance{
+
+            address owner = msg.sender;
+            uint balance = 0;
+
+            function setBalance() public returns(uint) {
+                return balance++;
+            }
+
+            function getBalance() public view returns(uint, address){
+
+                // until balance has been incremented and made equal to 6, this function
+                // will not run the code below the require statement which is to return balane and owner's address
+                require(balance == 6);
+                return (balance, owner);
+            }
+
+        }
